@@ -368,3 +368,86 @@ footer {
     padding: 4rem;
   }
 }
+
+/* Confirmation Page Styles */
+.confirmation-section {
+  padding: 4rem 1rem;
+  background-color: #f8f9fa;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmation-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 3rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.confirmation-container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-green);
+  margin-bottom: 1.5rem;
+}
+
+.confirmation-message {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.confirmation-details {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.confirmation-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.secondary-button:hover {
+  background-color: var(--primary-green);
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .confirmation-container {
+    padding: 4rem;
+  }
+  
+  .confirmation-container h1 {
+    font-size: 3rem;
+  }
+}

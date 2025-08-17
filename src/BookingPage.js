@@ -1,4 +1,5 @@
 import { useReducer, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import BookingForm from './BookingForm';
 import { fetchAPI, submitAPI } from './api';
 
@@ -28,6 +29,7 @@ function BookingPage() {
   const [availableTimes, dispatch] = useReducer(timesReducer, [], initializeTimes);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const updateTimes = async (selectedDate) => {
     if (!selectedDate) return;
@@ -53,11 +55,8 @@ function BookingPage() {
     try {
       await submitAPI(formData);
       
-      // Show success message
-      alert(`Reservation confirmed for ${formData.guests} guest${formData.guests > 1 ? 's' : ''} on ${formData.date} at ${formData.time}${formData.occasion ? ' for ' + formData.occasion : ''}.`);
-      
-      // Reset times to initial state
-      dispatch({ type: 'UPDATE_TIMES', payload: initializeTimes() });
+      // Navigate to confirmation page
+      navigate('/confirmed');
       
     } catch (err) {
       setError(err.message || 'Failed to submit reservation. Please try again.');
