@@ -12,7 +12,7 @@ function Main() {
             <Link to="/booking" className="cta-button">Reserve a table</Link>
           </div>
           <div className="hero-image">
-            <img src="/images/f21897ecfdee7d5927d1ec7b61408485ab9f6838.jpg" alt="Mediterranean dishes" />
+            <img src="/images/d4ac7f08664b3ab85e379c0cfcfb44c74aa0a76e.jpg" alt="Mediterranean dishes" />
           </div>
         </div>
       </section>
@@ -40,7 +40,7 @@ function Main() {
           </article>
           
           <article className="menu-item">
-            <img src="/images/49a4f4fdcc436f25940a66afb4ae5e3f73861bdf.jpg" alt="Bruschetta" className="menu-item-image" />
+            <img src="/images/3d3cce7a3104bf255ed0e69195e2a157338c1bff.jpg" alt="Bruschetta" className="menu-item-image" />
             <div className="menu-item-content">
               <h3>Bruschetta</h3>
               <p>Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.</p>
@@ -58,29 +58,29 @@ function Main() {
           </article>
 
           <article className="menu-item">
-            <img src="/images/725cbe0ca5da8536fc99c51e00d4d13628bd9745.jpg" alt="Mediterranean Pasta" className="menu-item-image" />
+            <img src="/images/5b33e9cd6067eb9aa7ce588a24f8a5d73bf37ee0.jpg" alt="Mediterranean Fish" className="menu-item-image" />
+            <div className="menu-item-content">
+              <h3>Mediterranean Fish</h3>
+              <p>Fresh catch of the day grilled with lemon, herbs, and olive oil, served with seasonal vegetables.</p>
+              <span className="price">$22.50</span>
+            </div>
+          </article>
+
+          <article className="menu-item">
+            <img src="/images/871655af5e4849aa43a6d293284825002e7aeb50.jpg" alt="Grilled Vegetables" className="menu-item-image" />
+            <div className="menu-item-content">
+              <h3>Grilled Vegetables</h3>
+              <p>Seasonal vegetables grilled to perfection with Mediterranean herbs, olive oil, and balsamic glaze.</p>
+              <span className="price">$14.99</span>
+            </div>
+          </article>
+
+          <article className="menu-item">
+            <img src="/images/957db75e6b654e07f65da12b96dc858c5995ed28.jpg" alt="Mediterranean Pasta" className="menu-item-image" />
             <div className="menu-item-content">
               <h3>Mediterranean Pasta</h3>
               <p>Fresh pasta tossed with sun-dried tomatoes, kalamata olives, and feta cheese in our signature herb oil.</p>
               <span className="price">$16.50</span>
-            </div>
-          </article>
-
-          <article className="menu-item">
-            <img src="/images/86e25d3f0d3ed062c33bceae17967224721fb34e.jpg" alt="Grilled Lamb" className="menu-item-image" />
-            <div className="menu-item-content">
-              <h3>Grilled Lamb</h3>
-              <p>Tender lamb chops marinated in Mediterranean herbs and grilled to perfection, served with roasted vegetables.</p>
-              <span className="price">$24.99</span>
-            </div>
-          </article>
-
-          <article className="menu-item">
-            <img src="/images/957db75e6b654e07f65da12b96dc858c5995ed28.jpg" alt="Seafood Platter" className="menu-item-image" />
-            <div className="menu-item-content">
-              <h3>Seafood Platter</h3>
-              <p>A selection of the freshest catch including grilled octopus, prawns, and sea bass with lemon and herbs.</p>
-              <span className="price">$28.00</span>
             </div>
           </article>
         </div>
