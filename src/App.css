@@ -1,38 +1,226 @@
-.App {
-  text-align: center;
+/* Little Lemon Design System */
+:root {
+  --primary-green: #495E57;
+  --primary-yellow: #F4CE14;
+  --border-radius: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header Styles */
+header {
+  background-color: white;
+  padding: 1rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hamburger-menu {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-green);
+  margin: 3px 0;
+  border-radius: 2px;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--primary-green);
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 500;
+  color: var(--primary-yellow);
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  max-width: 65ch;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: var(--primary-yellow);
+  color: black;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Menu Section */
+.menu {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu h2 {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.menu-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.menu-nav li {
+  white-space: nowrap;
+}
+
+.menu-nav a {
+  background-color: #f0f0f0;
+  color: var(--primary-green);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.menu-nav a:hover,
+.menu-nav a:focus {
+  background-color: var(--primary-green);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Menu Items */
+.menu-items {
+  display: grid;
+  gap: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.menu-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 0.5rem;
+  max-width: 65ch;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--primary-green);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-green);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .hero h1 {
+    font-size: 72px;
+  }
+  
+  .menu {
+    padding: 4rem 2rem;
+  }
+  
+  .menu-items {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .menu-nav ul {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .menu-items {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
