@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Main() {
   return (
     <main>
@@ -6,7 +8,7 @@ function Main() {
           <h1>Little Lemon</h1>
           <h2>Chicago</h2>
           <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-          <button className="cta-button">Reserve a table</button>
+          <Link to="/booking" className="cta-button">Reserve a table</Link>
         </div>
       </section>
       

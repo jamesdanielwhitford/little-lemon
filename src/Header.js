@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Header() {
   return (
     <header>
@@ -8,6 +10,10 @@ function Header() {
             <span></span>
             <span></span>
           </div>
+          <ul className="nav-links">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/booking">Reserve a Table</Link></li>
+          </ul>
           <div className="cart-icon">
             🛒
           </div>
