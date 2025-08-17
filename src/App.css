@@ -174,24 +174,37 @@ header {
   flex-shrink: 0;
 }
 
-.menu-nav a {
+.menu-nav button {
   background-color: #f0f0f0;
   color: var(--primary-green);
-  text-decoration: none;
+  border: none;
   padding: 0.75rem 1.5rem;
   border-radius: var(--border-radius);
   font-weight: 600;
   font-size: 16px;
   transition: all 0.3s ease;
   display: block;
+  cursor: pointer;
+  width: 100%;
 }
 
-.menu-nav a:hover,
-.menu-nav a:focus {
+.menu-nav button:hover,
+.menu-nav button:focus {
   background-color: var(--primary-green);
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(73, 94, 87, 0.3);
+}
+
+.menu-nav button.active {
+  background-color: var(--primary-green);
+  color: white;
+  box-shadow: 0 4px 8px rgba(73, 94, 87, 0.3);
+}
+
+.menu-nav button.active:hover {
+  background-color: var(--primary-yellow);
+  color: var(--primary-green);
 }
 
 /* Menu Items */
@@ -199,6 +212,7 @@ header {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  transition: all 0.3s ease;
 }
 
 .menu-item {
